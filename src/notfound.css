@@ -1,0 +1,15 @@
+h1 {
+  color: red;
+}
+h3 {
+  color: rgb(209, 94, 94);
+}
+.card {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  text-align: center;
+  background-color: rgba(85, 217, 235, 0.6);
+  padding: 5%;
+  border-radius: 25px;
+}
