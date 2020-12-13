@@ -14,31 +14,7 @@ class Login extends Component {
         email: '',
         password: ''
     }
-    signup(res) {
-        const googleresponse = {
-            Name: res.profileObj.name,
-            email: res.profileObj.email,
-            token: res.googleId,
-            Image: res.profileObj.imageUrl,
-            ProviderId: 'Google',
-            googleId: res.profileObj.googleId
 
-        };
-
-        const { firebase } = this.props;
-        const { email, googleId } = googleresponse;
-        console.log(googleId);
-        var pre = false;
-        // aka.map(i => (i.email === email ? (pre = false) : null))
-        var password = googleId.toString();
-        firebase.login({ email, password }).catch(err => (
-            pre = true));
-        if (pre) {
-            firebase.createUser({ email, password }).then(this.props.history.push('./'))
-        }
-
-
-    };
     onchange = e => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -50,14 +26,7 @@ class Login extends Component {
     }
 
     render() {
-        const responseGoogle = (response) => {
-            if (response) {
-                var res = response.profileObj;
-                console.log(res);
-                this.signup(response);
-            }
 
-        }
         const { email, password } = this.state;
 
         return (
@@ -71,16 +40,7 @@ class Login extends Component {
                                     Login
                               </span>
                             </h1>
-                            <GoogleLogin
-                                clientId="473801534894-odpiok16a0m9ch62a85mn6g1m4u1r073.apps.googleusercontent.com"
 
-                                buttonText="Login with Google"
-                                onSuccess={responseGoogle}
-                                onFailure={responseGoogle}
-
-                                isSignedIn={true}
-                            />,
-                {document.getElementById('googleButton')}
                             <form onSubmit={this.onsubmit}>
                                 <label htmlFor="email" className="form-group">
                                     Email

@@ -41,15 +41,12 @@ class Bar extends Component {
 
                     </div><div>
                         {isAuthenticated ? (<ul className='navbar-nav ml-0'>
-                            <li className='nav-item'>
-                                <a className='nav-link'>   {auth.email}</a> </li>
+                            <li className='nav-item'><a href='#!' className='nav-link'>
+                                {auth.email}
+                            </a>
+                            </li>
                             <li className='nav-item'><a href='#!' onClick={this.logout} className='nav-link'>
-                                <GoogleLogout
-                                    clientId="473801534894-odpiok16a0m9ch62a85mn6g1m4u1r073.apps.googleusercontent.com"
-                                    buttonText="Logout"
-
-                                >
-                                </GoogleLogout></a></li>
+                                Logout</a></li>
                         </ul>) : (
 
 
