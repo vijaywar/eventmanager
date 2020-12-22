@@ -12,14 +12,14 @@ import {
 import { reduxFirestore, firestoreReducer } from 'redux-firestore' // <- needed if using firestore
 
 const fbConfig = {
-    apiKey: "AIzaSyBLA1ik3eJI9B6vU930LVdq67PCQDP3M_g",
-    authDomain: "controlpanelsue.firebaseapp.com",
-    databaseURL: "https://controlpanelsue.firebaseio.com",
-    projectId: "controlpanelsue",
-    storageBucket: "controlpanelsue.appspot.com",
-    messagingSenderId: "473801534894",
-    appId: "1:473801534894:web:d5529d6b65c22af6d12c3f",
-    measurementId: "G-QM7MRNG500"
+    apiKey: ,
+    authDomain:"confidential data" ,
+    databaseURL: "",
+    projectId:"" ,
+    storageBucket:"" ,
+    messagingSenderId: ,
+    appId: "",
+    measurementId: ""
 }
 
 
